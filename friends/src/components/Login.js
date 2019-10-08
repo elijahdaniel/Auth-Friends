@@ -26,12 +26,14 @@ class Login extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleLogin}>
+        <input type='hidden' value='hidden' />
         <input
           type='text'
           name='username'
           value={this.state.credentials.username}
           onChange={this.handleChange}
           placeholder='Usename'
+          autoComplete='off'
         />{' '}
         <br />
         <input
