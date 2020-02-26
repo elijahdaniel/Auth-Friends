@@ -5,6 +5,10 @@ export const LOGGING_START = 'LOGGING_START'
 export const LOGGING_FAILURE = 'LOGGING_FAILURE'
 export const LOGGING_SUCCESS = 'LOGGING_SUCCESS'
 
+export const GETTING_FRIENDS_START = 'GETTING_FRIENDS_START'
+export const GETTING_FRIENDS_SUCCESS = 'GETTING_FRIENDS_SUCCESS'
+export const GETTING_FRIENDS_FAILURE = 'GETTING_FRIENDS_FAILURE'
+
 export const loggingStart = credentials => dispatch => {
   dispatch({ type: LOGGING_START })
   return axios
@@ -17,10 +21,6 @@ export const loggingStart = credentials => dispatch => {
       dispatch({ type: LOGGING_FAILURE, payload: err })
     })
 }
-
-export const GETTING_FRIENDS_START = 'GETTING_FRIENDS_START'
-export const GETTING_FRIENDS_SUCCESS = 'GETTING_FRIENDS_SUCCESS'
-export const GETTING_FRIENDS_FAILURE = 'GETTING_FRIENDS_FAILURE'
 
 export const getFriends = () => dispatch => {
   dispatch({ type: GETTING_FRIENDS_START })
